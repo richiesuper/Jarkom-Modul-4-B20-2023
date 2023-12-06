@@ -32,8 +32,29 @@ Berikut adalah tabel pembagian IP dari hasil subnetting VLSM.
 
 # VLSM Routing di Cisco Packet Tracer
 
-Bagian Richie
-(Masukkan video demonstrasi ping antar client)
+Berikut routing table dari masing-masing router
+
+![router](assets/vlsm-aura.png)
+
+![router](assets/vlsm-denken.png)
+
+![router](assets/vlsm-eisen.png)
+
+![router](assets/vlsm-fern.png)
+
+![router](assets/vlsm-flamme.png)
+
+![router](assets/vlsm-frieren.png)
+
+![router](assets/vlsm-heiter.png)
+
+![router](assets/vlsm-himmel.png)
+
+![router](assets/vlsm-lawine.png)
+
+![router](assets/vlsm-linie.png)
+
+![router](assets/vlsm-lugner.png)
 
 # CIDR Subnetting di GNS 3
 
