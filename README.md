@@ -53,5 +53,6 @@ Berikut merupakan hasil dari pembagian IP berdasarkan Tree yang telah dibuat seb
 
 # CIDR Routing di GNS 3
 
-Bagian Dimas
-(Masukkan video demonstrasi ping antar client)
+Untuk menguji keberhasilan konfigurasi routing, dalam GNS3 dapat dilakukan pengujian menggunakan perintah traceroute. Sebagai contoh, pada device AppetitRegion, dilakukan traceroute ke device GranzChannel yang memiliki alamat IP `192.190.224.2.` Proses ini dapat dijalankan dengan perintah `traceroute 192.190.224.`2 pada device AppetitRegion, yang akan menghasilkan output:
+
+![routing](assets/routing.png)
