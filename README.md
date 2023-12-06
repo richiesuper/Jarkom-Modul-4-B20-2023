@@ -6,13 +6,29 @@ Praktikum 4 Jarkom oleh Kelompok B20 (Richie Seputro dan Dimas Aria Pujangga)
 
 ![topologi](assets/topologi.png)
 
-# Rute
+# Subnets
 
 ![rute](assets/rute.png)
 
+![rute gambar](assets/rute-gambar.png)
+
 # VLSM Subnetting di Cisco Packet Tracer
 
-Bagian Richie
+VLSM adalah teknik subnetting di mana dilakukan pembagian IP kepada host dan subnet jaringan secara variabel dan efisien, sehingga pemborosan IP address dapat diminimalisir. Pada teknik ini, sebuah main net akan dipecah-pecah menjadi 2 subnet yang lebih kecil yang netmask-nya lebih besar 1 dari netmask miliknya sendiri. Misal, main net dengan netmask /24 akan dipecah jadi 2 subnet dengan netmask /25. Teknik ini memanglah lebih efisien dibanding teknik CIDR, namun, bila terjadi penambahan subnet baru / host-host baru, kemungkinan besar perlu dilakukan proses subnetting ulang karena belum tentu skema subnetting yang lama bisa ditambahi dengan host-host / subnet baru tersebut.
+
+Pada teknik VLSM, kita perlu memulai dari main/root network terlebih dahulu, yang mana pada kelompok kami adalah 192.188.0.0/19. Netmask /19 didapatkan dari penghitungan subnet di atas yang memperlihatkan bahwa diperlukan 4255 buah IP address. Perlu diingat juga bahwa pemilihan netmask tidak hanya bergantung dari jumlah IP address yang dibutuhkan, tetapi juga berdasarkan jumlah subnet yang persis di bawahnya. Pada daftar subnet, terlihat bahwa subnet terbesar memerlukan netmask /21. Setelah dilakukan penghitungan, netmask /19 adalah netmask terkecil yang bisa menampung IP address sebanyak itu dan mengakomodir kebutuhan subnet mask subnet-subnet dibawahnya.
+
+## Tree
+
+Berikut adalah tree subnetting VLSM yang didapatkan setelah melakukan proses pemecahan network.
+
+![vlsm tree](assets/vlsm-tree.png)
+
+## Pembagian IP
+
+Berikut adalah tabel pembagian IP dari hasil subnetting VLSM.
+
+![pembagian ip vlsm](assets/vlsm-pembagianIP.png)
 
 # VLSM Routing di Cisco Packet Tracer
 
@@ -31,7 +47,7 @@ CIDR mengatasi kelemahan ini dengan memungkinkan organisasi untuk mengalokasikan
 
 Notasi CIDR digunakan untuk mewakili alamat IP dan jumlah bit pengidentifikasi jaringan. Notasi ini terdiri dari alamat IP diikuti oleh tanda garis miring (/) dan jumlah bit pengidentifikasi jaringan. Misalnya, alamat IP 192.168.1.0 dengan 22 bit pengidentifikasi jaringan direpresentasikan sebagai 192.168.1.0/22.
 
-# Penggabungan Node
+## Penggabungan Node
 
 ![penggabunganIP](assets/penggabunganIP.png)
 
@@ -39,19 +55,19 @@ Notasi CIDR digunakan untuk mewakili alamat IP dan jumlah bit pengidentifikasi j
 
 ![penggabunganIP](assets/penggabunganIP(2).png)
 
-# Tree
+## Tree
 
 Setelah dilakukannya penggabungan IP, sekarang kita melakukan pembagian IP dengan menggunakan tree pada masing-masing kelompok yang telah dibuat sebelumnya sebagai berikut.
 
 ![Tree](assets/tree.png)
 
-# Pembagian IP
+## Pembagian IP
 
 Berikut merupakan hasil dari pembagian IP berdasarkan Tree yang telah dibuat sebelumnya.
 
 ![PembagianIP](assets/pembagianIP.png)
 
-# CIDR Routing di GNS 3
+## CIDR Routing di GNS 3
 
 Bagian Dimas
 (Masukkan video demonstrasi ping antar client)
